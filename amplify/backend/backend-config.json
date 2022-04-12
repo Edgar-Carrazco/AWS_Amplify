@@ -64,5 +64,12 @@
       "type": "cicd",
       "lastPushTimeStamp": "2022-04-12T22:03:21.241Z"
     }
+  },
+  "storage": {
+    "awsnotesapp": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": []
+    }
   }
 }
