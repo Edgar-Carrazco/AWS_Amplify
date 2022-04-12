@@ -2,7 +2,7 @@
   "version": "1",
   "cognitoConfig": {
     "identityPoolName": "awsamplifyapp4dfcd225_identitypool_4dfcd225",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "awsamp4dfcd225",
     "userPoolName": "awsamplifyapp4dfcd225_userpool_4dfcd225",
     "autoVerifiedAttributes": [
@@ -24,7 +24,7 @@
     ],
     "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
-    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientRefreshTokenValidity": "30",
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
     "userpoolClientLambdaRole": "awsamp4dfcd225_userpoolclient_lambda_role",
@@ -52,9 +52,14 @@
     "breakCircularDependency": true,
     "dependsOn": [],
     "userPoolGroups": false,
-    "adminQueries": false,
+    "adminQueries": true,
     "thirdPartyAuth": false,
     "authProviders": [],
-    "hostedUI": false
+    "hostedUI": false,
+    "triggers": {},
+    "parentStack": {
+      "Ref": "AWS::StackId"
+    },
+    "permissions": []
   }
 }
