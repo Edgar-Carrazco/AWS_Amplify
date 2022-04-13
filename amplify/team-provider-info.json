@@ -13,7 +13,8 @@
     },
     "categories": {
       "auth": {
-        "awsamplifyapp4dfcd225": {}
+        "awsamplifyapp4dfcd225": {},
+        "userPoolGroups": {}
       },
       "hosting": {
         "amplifyhosting": {

@@ -5,14 +5,32 @@
     "serviceName": "AppSync",
     "gqlSchemaPath": "C:\\Users\\Legen\\Desktop\\aws-amplify-app\\amplify\\backend\\api\\awsamplifyapp\\schema.graphql",
     "defaultAuthType": {
-      "mode": "API_KEY",
-      "expirationTime": 7
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authawsamplifyapp4dfcd225"
     },
     "additionalAuthTypes": [
       {
-        "mode": "AMAZON_COGNITO_USER_POOLS",
-        "cognitoUserPoolId": "authawsamplifyapp4dfcd225"
+        "mode": "API_KEY",
+        "expirationTime": 30,
+        "apiKeyExpirationDate": "2022-05-13T21:22:33.683Z",
+        "keyDescription": "AWS Amplify User"
+      },
+      {
+        "mode": "AWS_IAM"
       }
-    ]
+    ],
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      },
+      "perModelResolutionStrategy": [
+        {
+          "resolutionStrategy": {
+            "type": "AUTOMERGE"
+          },
+          "entityName": "Note"
+        }
+      ]
+    }
   }
 }

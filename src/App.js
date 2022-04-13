@@ -8,12 +8,6 @@ import { API, Storage } from 'aws-amplify';
 import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
 
-
-Amplify.configure(awsconfig);
-
-// >>New - Configuring Auth Module
-Auth.configure(awsconfig);
-
 const initialFormState = { name: '', description: '' }
 
 function App() {
@@ -24,6 +18,13 @@ function App() {
 	useEffect(() => {
 		fetchNotes();
 	}, []);
+
+	const myAppConfig = {
+		'aws_appsync_graphqlEndpoint': 'https://ztw43cbf7jaz5o5yizz26n7zze.appsync-api.us-east-1.amazonaws.com/graphql',
+		'aws_appsync_region': 'us-east-1',
+		'aws_appsync_authenticationType': 'API_KEY',
+		'aws_appsync_apiKey': 'da2-zbzmo4k4mvdxnetrybw2m6jlr4',
+	}
 
 	async function fetchNotes() {
 		const apiData = await API.graphql({ query: listNotes });
@@ -102,3 +103,7 @@ function App() {
 }
 
 export default withAuthenticator(App);
+
+Amplify.configure(awsconfig);	
+Amplify.configure(myAppConfig)
+Auth.configure(awsconfig);
