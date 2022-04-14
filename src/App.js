@@ -7,6 +7,8 @@ import { createNote as createNoteMutation, deleteNote as deleteNoteMutation } fr
 import { API, Storage } from 'aws-amplify';
 import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
+import { DataStore } from '@aws-amplify/datastore';
+import { Note } from './models';
 
 const initialFormState = { name: '', description: '' }
 

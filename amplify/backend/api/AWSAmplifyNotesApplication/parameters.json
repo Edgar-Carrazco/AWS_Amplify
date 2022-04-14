@@ -1,5 +1,5 @@
 {
-  "AppSyncApiName": "awsamplifyapp",
+  "AppSyncApiName": "AWSAmplifyNotesApplication",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false,
   "AuthCognitoUserPoolId": {
@@ -7,6 +7,5 @@
       "authawsamplifyapp4dfcd225",
       "Outputs.UserPoolId"
     ]
-  },
-  "AuthModeLastUpdated": "2022-04-13T21:22:35.574Z"
+  }
 }

@@ -1,6 +1,6 @@
 {
   "api": {
-    "awsamplifyapp": {
+    "AWSAmplifyNotesApplication": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "dependsOn": [
@@ -15,22 +15,21 @@
       "output": {
         "authConfig": {
           "defaultAuthentication": {
-            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
-            "userPoolConfig": {
-              "userPoolId": "authawsamplifyapp4dfcd225"
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
             }
           },
           "additionalAuthenticationProviders": [
             {
-              "authenticationType": "API_KEY",
-              "apiKeyConfig": {
-                "apiKeyExpirationDays": 30,
-                "apiKeyExpirationDate": "2022-05-13T21:22:33.683Z",
-                "description": "AWS Amplify User"
-              }
+              "authenticationType": "AWS_IAM"
             },
             {
-              "authenticationType": "AWS_IAM"
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authawsamplifyapp4dfcd225"
+              }
             }
           ]
         }
