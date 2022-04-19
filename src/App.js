@@ -10,14 +10,7 @@ import awsconfig from './aws-exports';
 import { DataStore } from '@aws-amplify/datastore';
 import { Note } from './models';
 
-const initialFormState = { name: '', description: '' }
-
-const myAppConfig = {
-	'aws_appsync_graphqlEndpoint': 'https://ztw43cbf7jaz5o5yizz26n7zze.appsync-api.us-east-1.amazonaws.com/graphql',
-	'aws_appsync_region': 'us-east-1',
-	'aws_appsync_authenticationType': 'API_KEY',
-	'aws_appsync_apiKey': 'da2-zbzmo4k4mvdxnetrybw2m6jlr4',
-}
+const initialFormState = { name: '', description: '' };
 
 function App() {
 	
@@ -106,5 +99,4 @@ function App() {
 	);
 }
 
-export default withAuthenticator(Ap , { includeGreetings: true });
-Auth.configure(awsconfig);
+export default withAuthenticator(App , { includeGreetings: true });
