@@ -106,8 +106,5 @@ function App() {
 	);
 }
 
-export default withAuthenticator(App);
-
-Amplify.configure(awsconfig);	
-Amplify.configure(myAppConfig)
+export default withAuthenticator(Ap , { includeGreetings: true });
 Auth.configure(awsconfig);
